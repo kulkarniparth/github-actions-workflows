@@ -1,0 +1,27 @@
+name: workflow2
+
+on: push
+
+jobs:
+  job1:
+    name: first_job
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3.3.0
+      - name: Show directory structure
+        run: ls      
+  job2:
+    name: second_job
+    needs: [job1]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Python Syntax Checker
+        uses: cclauss/Find-Python-syntax-errors-action@v0.2.0
+  job3:
+    name: third_job
+    needs: [job2]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Linting Action
+        uses: ryanclark/lint-action@v1.15.0
