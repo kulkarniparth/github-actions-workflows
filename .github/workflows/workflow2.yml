@@ -23,5 +23,5 @@ jobs:
     needs: [job2]
     runs-on: ubuntu-latest
     steps:
-      - name: Linting Action
-        uses: ryanclark/lint-action@v1.15.0
+      - name: Super-Linter
+        uses: github/super-linter@v4.10.1
