@@ -23,7 +23,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: hello-file
-          path: ./$ARTIFACT_NAME.txt
+          path: $ARTIFACT_NAME.txt
   job2:
     name: job_two
     needs: [job1]
