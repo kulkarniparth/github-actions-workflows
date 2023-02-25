@@ -1,6 +1,8 @@
 name: workflow2
 
-on: push
+on: 
+  workflow_dispatch:
+    
 
 jobs:
   job1:
@@ -18,10 +20,3 @@ jobs:
     steps:
       - name: Python Syntax Checker
         uses: cclauss/Find-Python-syntax-errors-action@v0.2.0
-  job3:
-    name: third_job
-    needs: [job2]
-    runs-on: ubuntu-latest
-    steps:
-      - name: Super-Linter
-        uses: github/super-linter@v4.10.1
