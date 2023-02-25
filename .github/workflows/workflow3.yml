@@ -15,7 +15,7 @@ jobs:
 
       - name: Create Artifact file
         run: |
-          echo "Hello World from me" > "${ARTIFACT_NAME}".txt
+          echo Hello World from me > $ARTIFACT_NAME.txt
 
       - name: Upload artifact
         uses: actions/upload-artifact@v3
