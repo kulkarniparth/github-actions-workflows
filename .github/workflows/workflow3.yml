@@ -31,5 +31,5 @@ jobs:
       - name: Download Artifact
         uses: actions/download-artifact@v3
         with:
-          name: hello-file
-          path: ./${ARTIFACT_NAME}.txt
+          name: hello
+          path: hello.txt
