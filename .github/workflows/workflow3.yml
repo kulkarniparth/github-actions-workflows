@@ -15,13 +15,14 @@ jobs:
 
       - name: Create Artifact file
         run: |
-          echo Hello World from me > $ARTIFACT_NAME.txt
+          echo $ARTIFACT_NAME > hello.txt
           pwd
 
       - name: Upload artifact
         uses: actions/upload-artifact@v3
         with:
-          path: hello-world.txt
+          name: hello
+          path: hello.txt
   job2:
     name: job_two
     needs: [job1]
